@@ -1,0 +1,45 @@
+<h1>Juego de Sintaxis creado por Huguini79</h1>
+@if(!final)
+{
+<h2>Correctas: {{ correctas }} | Incorrectas: {{ incorrectas }}</h2>
+
+<label style="color: blue">{{ pregunta_actual.pregunta }}</label>
+<br>
+<label style="color: green">Posibles respuestas: {{ pregunta_actual.adi }}</label>
+<br><br>
+<button (click)="Comprobar(1)">1</button>
+<button (click)="Comprobar(2)">2</button>
+<button (click)="Comprobar(3)">3</button>
+
+<br><br>
+
+@if (correcto)
+{
+<label style="color: green">Felicidades!, la respuesta es correcta</label>
+<br><br>
+<button (click)="Siguiente()">Siguiente</button>
+
+} @else if (incorrecto)
+{
+<label style="color: red">Incorrecto, la respuesta era {{ pregunta_actual.respuesta }}</label>
+<br><br>
+<button (click)="Siguiente()">Siguiente</button>
+}
+
+} @else
+{
+    <h2>Felicidades!, has terminado el juego</h2>
+    @for (pregunta of preguntas; track $index)
+    {
+        @if (pregunta.puntuacion == 1)
+        {
+            <label style="color: green">✅ Pregunta nº{{pregunta.id}}: {{ pregunta.pregunta }} | Correcto</label>
+            <br>
+        
+        } @else
+        {
+            <label style="color: red">❌ Pregunta nº{{pregunta.id}}: {{ pregunta.pregunta }} | Incorrecto -> respuesta: {{ pregunta.respuesta }}</label>
+            <br>
+        }
+    }
+}

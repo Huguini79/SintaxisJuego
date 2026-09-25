@@ -1,0 +1,44 @@
+.counter-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #f0cbd8;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 60px -36px rgba(107, 25, 59, 0.5);
+}
+
+.counter-card div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.label {
+  color: #856a75;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+strong {
+  color: #351827;
+  font-size: 2rem;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.15rem;
+  background: linear-gradient(135deg, #dd0031, #c30075);
+  color: white;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.94);
+}
