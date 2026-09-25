@@ -33,7 +33,7 @@ export class Preguntas
 
     final = false;
 
-    Comprobar(entrada: string)
+    Comprobar(entrada: any)
     {
         if (this.pregunta_actual.realizado != 1)
         {
