@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component
 ({
     selector: 'app-preguntas',
-    templateUrl: 'preguntas.html',
+    templateUrl: './preguntas.html',
     styleUrl: '../styles.css'
 })
 
